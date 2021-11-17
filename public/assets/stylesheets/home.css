@@ -1,0 +1,234 @@
+@import "common.css";
+
+/*
+    Important: 
+    When you set the width and height properties of an element with CSS, 
+    you just set the width and height of the content area. 
+    To calculate the full size of an element, 
+    you must also add padding, borders and margins.
+*/
+
+main>div {
+    padding: 20px;
+    width: calc(100% - 40px);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.image-gallery {
+    width: 100%;
+    background-color: #74C2E1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.image-gallery>div {
+    width: 420px;
+    height: 320px;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.image-gallery>div>div {
+    width: 400px;
+    height: 300px;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.image-gallery>div:nth-of-type(1)>div {
+    background-image: url("../gallery_images/img_5terre.jpg");
+    background-size: cover;
+    animation: image1 40s infinite;
+    -moz-animation: image1 40s infinite;
+    -webkit-animation: image1 40s infinite;
+}
+
+@keyframes image1 {
+    0% {
+        background-image: url("../gallery_images/img_5terre.jpg");
+    }
+
+    25% {
+        background-image: url("../gallery_images/img_forest.jpg");
+    }
+
+    50% {
+        background-image: url("../gallery_images/img_lights.jpg");
+    }
+
+    75% {
+        background-image: url("../gallery_images/img_mountains.jpg");
+    }
+
+    100% {
+        background-image: url("../gallery_images/img_5terre.jpg");
+    }
+}
+
+.image-gallery>div:nth-of-type(2)>div {
+    background-image: url("../gallery_images/img_forest.jpg");
+    background-size: cover;
+    animation: image2 40s infinite;
+    -moz-animation: image2 40s infinite;
+    -webkit-animation: image2 40s infinite;
+}
+
+@keyframes image2 {
+    0% {
+        background-image: url("../gallery_images/img_forest.jpg");
+    }
+
+    25% {
+        background-image: url("../gallery_images/img_lights.jpg");
+    }
+
+    50% {
+        background-image: url("../gallery_images/img_mountains.jpg");
+    }
+
+    75% {
+        background-image: url("../gallery_images/img_5terre.jpg");
+    }
+
+    100% {
+        background-image: url("../gallery_images/img_forest.jpg");
+    }
+}
+
+.image-gallery>div:nth-of-type(3)>div {
+    background-image: url("../gallery_images/img_lights.jpg");
+    background-size: cover;
+    animation: image3 40s infinite;
+    -moz-animation: image3 40s infinite;
+    -webkit-animation: image3 40s infinite;
+}
+
+@keyframes image3 {
+    0% {
+        background-image: url("../gallery_images/img_lights.jpg");
+    }
+
+    25% {
+        background-image: url("../gallery_images/img_mountains.jpg");
+    }
+
+    50% {
+        background-image: url("../gallery_images/img_5terre.jpg");
+    }
+
+    75% {
+        background-image: url("../gallery_images/img_forest.jpg");
+    }
+
+    100% {
+        background-image: url("../gallery_images/img_lights.jpg");
+    }
+}
+
+.image-gallery>div:nth-of-type(4)>div {
+    background-image: url("../gallery_images/img_mountains.jpg");
+    background-size: cover;
+    animation: image4 40s infinite;
+    -moz-animation: image4 40s infinite;
+    -webkit-animation: image4 40s infinite;
+}
+
+@keyframes image4 {
+    0% {
+        background-image: url("../gallery_images/img_mountains.jpg");
+    }
+
+    25% {
+        background-image: url("../gallery_images/img_5terre.jpg");
+    }
+
+    50% {
+        background-image: url("../gallery_images/img_forest.jpg");
+    }
+
+    75% {
+        background-image: url("../gallery_images/img_lights.jpg");
+    }
+
+    100% {
+        background-image: url("../gallery_images/img_mountains.jpg");
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .image-gallery {
+        background-color: #FF5252;
+    }
+
+    .image-gallery>div {
+        width: calc((100% - 30px) / 2);
+        height: 320px;
+    }
+
+    .image-gallery>div>div {
+        width: calc(100% - 20px);
+        height: 300px;
+    }
+
+    .image-gallery>div:nth-of-type(2) {
+        display: block;
+    }
+
+    .image-gallery>div:nth-of-type(3) {
+        display: none;
+    }
+
+    .image-gallery>div:nth-of-type(4) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .image-gallery {
+        background-color: #0288d1;
+    }
+
+    .image-gallery>div:nth-of-type(2) {
+        display: block;
+    }
+
+    .image-gallery>div:nth-of-type(3) {
+        display: none;
+    }
+
+    .image-gallery>div:nth-of-type(4) {
+        display: none;
+    }
+
+    main .main-content-wrapper {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 469px) {
+    .image-gallery {
+        background-color: #2e7d32;
+    }
+
+    .image-gallery>div {
+        width: calc((100% - 20px) / 1);
+        height: 320px;
+    }
+
+    .image-gallery>div:nth-of-type(2) {
+        display: none;
+    }
+
+    .image-gallery>div:nth-of-type(3) {
+        display: none;
+    }
+
+    .image-gallery>div:nth-of-type(4) {
+        display: none;
+    }
+}

@@ -1,0 +1,26 @@
+@import "home.css";
+@import "common.css";
+
+@media screen and (max-width: 991px) {}
+
+@media screen and (max-width: 767px) {
+    main .main-content-wrapper .content-wrapper {
+        width: 60%;
+    }
+
+    main .main-content-wrapper .quick-links {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 469px) {
+
+    main .main-content-wrapper .content-wrapper,
+    main .main-content-wrapper .quick-links {
+        width: 100%;
+    }
+
+    main .main-content-wrapper {
+        flex-direction: column-reverse;
+    }
+}

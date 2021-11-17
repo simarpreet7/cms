@@ -1,0 +1,730 @@
+/*
+    Here is where the design for the main page to be viewed. 
+    There needs to be perfect testing of the same on the desktop.
+*/
+
+body,
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    background-color: white;
+    /* 
+        font-size: 12px; 
+        This is a mal practice that no one should actually do. 
+        Use the automated size provided by user to the main device
+        This makes the User Experience better. No worries about the readability
+
+        Taking my example. I have set the comfortable font size to 16px. 
+        For me, 12px won't be readable and I will have to zoom in to see. 
+    */
+}
+
+header {
+    width: 100%;
+    background-color: rgb(7, 41, 78);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+nav.menu-bar {
+    display: none;
+    color: white;
+}
+
+header .hotlinks {
+    width: 100%;
+    height: 35px;
+    background-color: rgb(7, 41, 78);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+header .hotlinks>div {
+    width: calc(1080px / 6);
+    padding: 5px 10px;
+    font-size: 1em;
+    text-align: center;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+
+header .hotlinks>div:hover {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    background-color: white;
+    border-radius: 4px;
+    font-weight: bolder;
+    color: rgb(7, 41, 78);
+}
+
+header .hotlinks>div>a {
+    text-decoration: none;
+    color: white;
+}
+
+header .hotlinks>div:hover>a {
+    text-decoration: none;
+    color: rgb(7, 41, 78);
+}
+
+header .univ-wrapper {
+    display: flex;
+    width: 1360px;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+header .univ-wrapper .name {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: white;
+    font-size: 1em;
+}
+
+header .univ-wrapper .name>div {
+    padding: 0px 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+header .univ-wrapper .name>div:first-of-type {
+    padding: 15px;
+    font-size: 3em;
+    vertical-align: middle;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header .univ-wrapper .logo>img {
+    height: 120px;
+    width: 125px;
+    margin-top: 5px;
+    margin-right: 50px;
+    border-radius: 5px;
+}
+
+nav.nav-bar {
+    height: 35px;
+    color: white;
+    background-color: rgb(7, 41, 78);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    border-bottom: 1px solid white;
+}
+
+nav.nav-bar>div {
+    width: calc(1080px / 6);
+    padding: 5px 10px;
+    margin-top: 3px;
+    font-size: 1em;
+    text-align: center;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+
+nav.nav-bar>div:hover {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    background-color: white;
+    border-radius: 4px;
+    color: rgb(7, 41, 78);
+}
+
+nav.nav-bar>div:hover::after {
+    content: "";
+    /* Think of ways of placing a down arrow here. */
+    color: rgb(7, 41, 78);
+}
+
+/* nav.nav-bar>div>div {
+    display: none;
+    z-index: 2;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #dddddd;
+}
+
+nav.nav-bar>div>div:first-of-type {
+    display: block;
+    border-bottom: none;
+}
+
+nav.nav-bar>div:hover>div {
+    display: block;
+}
+
+nav.nav-bar>div:hover>div:first-of-type {
+    color: rgb(7, 41, 78);
+    font-weight: bolder;
+    border-bottom: 1px solid #dddddd;
+} */
+
+main {
+    width: 1360px;
+    margin-left: calc((100% - 1360px) / 2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main>div {
+    padding: 20px;
+    width: calc(100% - 40px);
+    font-family: 'Open Sans', sans-serif;
+}
+
+main .main-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main .main-content-wrapper .quick-links {
+    width: 20%;
+}
+
+main .main-content-wrapper .quick-links>div {
+    width: calc(100% - 35px);
+    padding: 5px 10px;
+    border-bottom: 1px dotted #bbbbbb;
+    color: rgb(7, 41, 78);
+}
+
+main .main-content-wrapper .quick-links>div:hover::before {
+    content: "- ";
+    font-size: 1em;
+    color: #74C2E1;
+}
+
+main .main-content-wrapper .quick-links>div:first-of-type {
+    border-top: 1px dotted #bbbbbb;
+}
+
+main .main-content-wrapper .quick-links>div:hover {
+    color: white;
+    border-radius: 4px;
+    background-color: rgb(7, 41, 78);
+}
+
+main .main-content-wrapper .content-wrapper {
+    padding: 20px;
+    border: 2px solid #dddddd;
+    width: 80%;
+    font-size: 1em;
+    text-align: justify;
+}
+
+main .main-content-wrapper .content-wrapper>div:first-of-type {
+    font-size: 1.8em;
+    text-align: left;
+    color: rgb(7, 41, 78);
+    font-weight: 900;
+    border-bottom: 2px solid #dddddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+main .main-content-wrapper .content-wrapper .banner {
+    font-size: 1.4em;
+    text-align: left;
+    color: rgb(7, 41, 78);
+    font-weight: 900;
+    border-bottom: 2px solid #dddddd;
+    padding: 5px 0px;
+    margin-bottom: 10px;
+}
+
+main .main-content-wrapper .content-wrapper .sub-banner {
+    font-size: 1.2em;
+    text-align: left;
+    color: rgb(7, 41, 78);
+    font-weight: 800;
+    border-bottom: 2px solid #dddddd;
+    padding: 5px 0px;
+    margin-bottom: 10px;
+}
+
+main .main-content-wrapper .content-wrapper .text {
+    font-size: 0.9em;
+    padding: 5px 0px;
+}
+
+footer {
+    color: white;
+
+    background-color: rgb(7, 41, 78);
+    border-top: 2px solid #eeeeee;
+
+    /* This is a property given to the immediate parent of the node to be edited */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* This is to align the items in the flex direction*/
+    align-items: center;
+    /* This is to align stuff in the direction perpendicular to the flex-direction*/
+}
+
+footer .links {
+    width: 1360px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* Aligning the rtu-pages and the social-media divs side by side*/
+}
+
+footer .links>div {
+    margin: 10px 0px;
+}
+
+footer .links .rtu-pages {
+    width: 70%;
+    color: #74C2E1;
+    display: flex;
+    /* Aligning the inner columns in one row*/
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+footer .links .rtu-pages .columns-wrapper {
+    width: auto;
+    padding-left: 15px;
+    font-size: 0.9em;
+}
+
+footer .links .rtu-pages .columns-wrapper>div {
+    padding: 2px 0px;
+}
+
+footer .links .rtu-pages .columns-wrapper>div:hover {
+    color: yellow;
+    cursor: pointer;
+}
+
+footer .links .rtu-pages .columns-wrapper>div::before {
+    content: "- ";
+    color: white;
+}
+
+footer .links .rtu-pages .columns-wrapper>div:first-of-type {
+    font-size: 1.2em;
+    margin: 5px 0px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: white;
+}
+
+footer .links .rtu-pages .columns-wrapper>div:first-of-type::before {
+    content: "";
+}
+
+footer .links .contact-us {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #dddddd;
+    border-left: 1px solid white;
+    padding-left: 25px;
+    background-color: rgba(0, 0, 0, 0.18);
+    border-radius: 0px 5px 5px 0px;
+}
+
+footer .links .contact-us .social-media {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .links .contact-us .social-media>div {
+    width: 1.5em;
+    height: 1.5em;
+    padding: 5px;
+    margin: 10px;
+}
+
+footer .links .contact-us .columns-wrapper>div {
+    font-size: 0.8em;
+    padding: 2px 2em;
+}
+
+footer .links .contact-us .columns-wrapper>div::before {
+    content: "";
+}
+
+footer .links .contact-us .columns-wrapper>div:first-of-type {
+    font-size: 1.2em;
+    margin: 5px 0px;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+footer .links .contact-us .columns-wrapper>div:first-of-type::before {
+    content: " \260E \ ";
+    margin-right: 7px;
+}
+
+footer .links .contact-us .social-media .fb {
+    background-image: url("../social_media_icons/fb_no_bg.png");
+    background-size: cover;
+}
+
+footer .links .contact-us .social-media .fb:hover {
+    background-image: url("../social_media_icons/fb_blue_bg.png");
+    background-size: cover;
+    background-color: white;
+    border-radius: 5px;
+}
+
+footer .links .contact-us .social-media .twitter {
+    background-image: url("../social_media_icons/twitter_no_bg.png");
+    background-size: cover;
+}
+
+footer .links .contact-us .social-media .twitter:hover {
+    background-image: url("../social_media_icons/twitter_blue_bg.png");
+    background-size: cover;
+}
+
+footer .copyright {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5px 0px;
+    color: #dddddd;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer .copyright>div {
+    margin: 10px 0px;
+}
+
+footer .copyright>div::after {
+    content: "\2022";
+    margin: 0px 10px;
+}
+
+footer .copyright>div:last-of-type::after {
+    content: "";
+}
+
+
+/* 
+    Let's go for the full-width menu-bar in this mode.
+    And around 450px in the emaining 2.
+*/
+
+@media screen and (max-width: 991px) {
+
+    /* start of large tablet styles */
+    /* design for the 10"+ tablets */
+    nav.menu-bar {
+        display: block;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        background-color: #FF5252;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    nav.menu-bar .closed-menu-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid white;
+    }
+
+    nav.menu-bar .closed-menu-wrapper>div>img {
+        height: 36px;
+        width: 36px;
+        margin: 3px 5px;
+    }
+
+    nav.menu-bar .closed-menu-wrapper>div>img:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 25%;
+    }
+
+    nav.menu-bar .open-menu-wrapper {
+        display: none;
+    }
+
+    nav.nav-bar,
+    header .hotlinks {
+        display: none;
+    }
+
+    header .univ-wrapper {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    header .univ-wrapper .logo>img {
+        margin: 0px 20px;
+    }
+
+    header .univ-wrapper .name {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main {
+        flex-direction: column;
+        width: calc(100% - 20px);
+        margin: 0px;
+        padding: 10px;
+    }
+
+    main .news-flash {
+        display: none;
+    }
+
+    main .main-content-wrapper .quick-links {
+        width: 30%;
+    }
+
+    main .main-content-wrapper .content-wrapper {
+        width: calc(200% / 3);
+    }
+
+
+    footer .links {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .links .rtu-pages {
+        width: 100%;
+        text-align: left;
+    }
+
+    footer .links .rtu-pages .columns-wrapper {
+        width: 24%;
+    }
+
+    footer .links .contact-us {
+        width: 95%;
+        flex-direction: row;
+        justify-content: space-between;
+        border: none;
+        border-radius: 4px;
+    }
+
+    footer .links .contact-us .columns-wrapper {
+        width: 50%;
+    }
+
+    footer .links .contact-us .social-media {
+        width: 50%;
+    }
+
+    footer .links .contact-us .social-media .fb:hover {
+        background-image: url("../social_media_icons/fb_no_bg.png");
+        background-size: cover;
+    }
+
+    footer .links .contact-us .social-media .fb {
+        background-image: url("../social_media_icons/fb_blue_bg.png");
+        background-size: cover;
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    footer .copyright {
+        font-size: 0.8em;
+    }
+}
+
+/*
+    Test results are out
+    max-width: 767px; style is working for the smartphone in the landscape orientation. 
+    max-width: 479px; style is working for the smartphone, but how?
+    I know that the resolution of my smartphone is 1280*720.
+    Is there some kind of scaling going on?
+    It is some what close to half as the 
+    2 device pixels are actually powering one pixel on the screen. VIP!!
+*/
+
+@media screen and (max-width: 767px) {
+
+    /* 
+    This is where I design the portion for the lanscape mode of the smartphone. 
+    *My smartphone.
+    */
+
+    /* start of medium tablet styles */
+    /* design for the 7" to 10" tablets */
+
+    nav.menu-bar {
+        background-color: #0288d1;
+    }
+
+    main .main-content-wrapper .content-wrapper {
+        width: calc(100% - 40px);
+    }
+
+    main .main-content-wrapper .quick-links {
+        /* width: 40%; */
+        width: 100%;
+        align-items: center;
+        margin-top: 25px;
+    }
+
+    footer .links .rtu-pages .columns-wrapper>div {
+        font-size: 0.85em;
+    }
+
+    footer .links .rtu-pages .columns-wrapper>div:first-of-type {
+        font-size: 1em;
+        text-transform: uppercase;
+    }
+
+    footer .copyright {
+        font-size: 0.7em;
+    }
+
+    /*
+    Still haven't found the solution to this problem. 
+    Correction: Problem solved... 
+    Just change the orientation of the device in the Chrome inspect tab. 
+    */
+}
+
+
+@media screen and (max-width: 479px) {
+    /* 
+    This is where I design the portion for the portrait mode of the smartphone. 
+    *My smartphone.
+    */
+
+    /* start of phone styles */
+
+    /*
+    I am not sure of this is gonna work with the smartphones 
+    and change with the orientation of the device...
+    
+    No of testing devices for this content is 3. 2 here and 1 with Sam
+    
+    I don't care about D anymore. Let her not work and I am gonna kick her out. 
+    Bros before hoes. Sam first. I need to make a proper mobile responsive website to impress him
+    and convince him to make an excellent website for Rajasthan Technical Univ
+    
+    Code RED. D must not get the hint that all the job has been done
+    and I did all of it. It emains a surprise. Let her focus on her career. 
+    I need to get more projects in future via Manoj Sir
+    
+    Personal Hackathon v1.0 Struggle to the end. 
+    
+    Project and money first. I will pay for my own course.
+    */
+
+    /* footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    footer .links {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    } */
+
+    /*
+    The reason I have commented them out, is to show that the properry stated
+    for the tablet and sizes larger than tha smartphone, 
+    are all valid in all circumstances.
+    */
+
+    header .univ-wrapper .name {
+        align-items: center;
+        padding: 0;
+    }
+
+    header .univ-wrapper .name>div:first-of-type {
+        font-size: 2.3em;
+        padding: 10px 0px;
+        text-align: center;
+    }
+
+    header .univ-wrapper .logo>img {
+        display: none;
+    }
+
+    nav.menu-bar {
+        background-color: #2e7d32;
+    }
+
+    main {
+        width: calc(100% - 10px);
+        padding: 5px;
+    }
+
+    main .main-content-wrapper .content-wrapper {
+        border: none;
+        width: 100%;
+        padding: 0px;
+    }
+
+    main .main-content-wrapper .quick-links {
+        width: 100%;
+        align-items: center;
+        margin-top: 25px;
+    }
+
+    footer .links .rtu-pages {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    footer .links .rtu-pages .columns-wrapper {
+        width: 45%;
+        padding-left: 10px;
+        margin: 10px 0px;
+    }
+
+    footer .links .rtu-pages,
+    footer .links .contact-us .columns-wrapper,
+    footer .links .contact-us .social-media {
+        width: 100%;
+    }
+
+    footer .links .contact-us {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    footer .copyright>div {
+        margin: 4px 0px;
+    }
+
+    footer .copyright>div::after {
+        content: "";
+    }
+
+    footer .copyright>div:nth-of-type(2) {
+        display: none;
+    }
+}
